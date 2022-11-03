@@ -1,12 +1,14 @@
 package com.example.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+@Entity /*something for use from table - ORL*/
+@Table(name = "userForJava")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private String name;
 
     @Override
